@@ -2,16 +2,28 @@ package ch.mare.springfundamentals.dependencyinjection.common.domain;
 
 public class Customer {
 
+  private String id;
+  private String name;
+  private MailingAddress mailingAddress;
+  private String emailAddress;
+
+  public Customer(String id, String name, MailingAddress mailingAddress, String emailAddress) {
+    this.id = id;
+    this.name = name;
+    this.mailingAddress = mailingAddress;
+    this.emailAddress = emailAddress;
+  }
+
   public boolean hasEmailAddress() {
-    return true;
+    return emailAddress != null && !emailAddress.isEmpty();
   }
 
   public String getEmailAddress() {
-    return "hans@wurst.com";
+    return emailAddress;
   }
 
   public MailingAddress getMailingAddress() {
-    return new MailingAddress();
+    return mailingAddress;
   }
 
   public void deactivate() {
