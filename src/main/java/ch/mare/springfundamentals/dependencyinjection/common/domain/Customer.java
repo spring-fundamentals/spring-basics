@@ -29,4 +29,14 @@ public class Customer {
   public void deactivate() {
     System.out.println("Customer has been deactivated.");
   }
+
+  @Override
+  public String toString() {
+    return "Customer{" +
+        "id='" + id + '\'' +
+        ", name='" + name + '\'' +
+        ", mailingAddress=" + mailingAddress +
+        ", emailAddress='" + emailAddress + '\'' +
+        '}';
+  }
 }

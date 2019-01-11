@@ -4,7 +4,7 @@ import ch.mare.springfundamentals.dependencyinjection.di_03.CustomerController;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class Main {
+public class Application {
 
   public static void main(String[] args) {
     ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);

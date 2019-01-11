@@ -1,6 +1,7 @@
 package ch.mare.springfundamentals.dependencyinjection.di_03;
 
 import ch.mare.springfundamentals.dependencyinjection.common.domain.Customer;
+import ch.mare.springfundamentals.dependencyinjection.common.domain.MailingAddress;
 import ch.mare.springfundamentals.dependencyinjection.common.service.EmailService;
 import ch.mare.springfundamentals.dependencyinjection.common.service.PostalService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +29,7 @@ public class CustomerService {
   }
 
   private Customer loadCustomerById(String customerId) {
-    return new Customer() ;
+    return new Customer("1", "Hans Wurst", new MailingAddress("Hauptstrasse 2", "Zürich"), "hans@wurst.ch") ;
   }
 
   private void deactivate(Customer customer) {
