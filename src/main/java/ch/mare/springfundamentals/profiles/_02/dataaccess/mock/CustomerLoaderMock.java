@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile({"mock"})
 public class CustomerLoaderMock implements CustomerLoader {
   private static final Map<String, Customer> DATABASE = new HashMap<>() {{
     put("1", new Customer("1", "Hans Tester", new MailingAddress("Teststrasse 2", "Zürich"), "hans@Test.ch"));

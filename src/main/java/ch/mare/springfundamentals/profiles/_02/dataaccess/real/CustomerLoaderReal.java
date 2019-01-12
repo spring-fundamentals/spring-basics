@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
+@Profile("real")
 public class CustomerLoaderReal implements CustomerLoader {
 
   private static final Map<String, Customer> DATABASE = new HashMap<>() {{

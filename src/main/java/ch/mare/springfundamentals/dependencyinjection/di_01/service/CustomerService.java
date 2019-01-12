@@ -7,7 +7,7 @@ import ch.mare.springfundamentals.dependencyinjection.di_01.dataaccess.CustomerL
 
 public class CustomerService {
 
-  public void removeCustomer(String customerId) {
+  public void deactivateCustomer(String customerId) {
 
     CustomerLoader customerLoader = new CustomerLoader();
     Customer customer = customerLoader.findById(customerId);
