@@ -5,7 +5,9 @@ import ch.mare.springfundamentals.dependencyinjection.di_01.controller.CustomerC
 public class Application {
 
   public static void main(String[] args) {
+
     CustomerController customerController = new CustomerController();
+
     customerController.deactivateCustomerAccount("1");
   }
 
