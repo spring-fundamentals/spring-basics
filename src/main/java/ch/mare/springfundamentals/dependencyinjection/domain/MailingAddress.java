@@ -1,4 +1,4 @@
-package ch.mare.springfundamentals.dependencyinjection.common.domain;
+package ch.mare.springfundamentals.dependencyinjection.domain;
 
 public class MailingAddress {
 
@@ -12,9 +12,6 @@ public class MailingAddress {
 
   @Override
   public String toString() {
-    return "MailingAddress{" +
-        "street='" + street + '\'' +
-        ", city='" + city + '\'' +
-        '}';
+    return street + ", " + city;
   }
 }

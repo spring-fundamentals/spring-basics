@@ -1,4 +1,4 @@
-package ch.mare.springfundamentals.dependencyinjection.common.domain;
+package ch.mare.springfundamentals.dependencyinjection.domain;
 
 public class Customer {
 
@@ -24,10 +24,6 @@ public class Customer {
 
   public MailingAddress getMailingAddress() {
     return mailingAddress;
-  }
-
-  public void deactivate() {
-    System.out.println("Customer has been deactivated.");
   }
 
   @Override

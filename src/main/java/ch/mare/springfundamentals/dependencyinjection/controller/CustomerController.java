@@ -1,6 +1,6 @@
-package ch.mare.springfundamentals.dependencyinjection.di_01.controller;
+package ch.mare.springfundamentals.dependencyinjection.controller;
 
-import ch.mare.springfundamentals.dependencyinjection.di_01.service.CustomerService;
+import ch.mare.springfundamentals.dependencyinjection.service.CustomerService;
 
 public class CustomerController {
 

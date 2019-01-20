@@ -1,7 +1,7 @@
-package ch.mare.springfundamentals.dependencyinjection.di_01.dataaccess;
+package ch.mare.springfundamentals.dependencyinjection.dataaccess;
 
-import ch.mare.springfundamentals.dependencyinjection.common.domain.Customer;
-import ch.mare.springfundamentals.dependencyinjection.common.domain.MailingAddress;
+import ch.mare.springfundamentals.dependencyinjection.domain.Customer;
+import ch.mare.springfundamentals.dependencyinjection.domain.MailingAddress;
 import java.util.HashMap;
 import java.util.Map;
 
