@@ -1,6 +1,6 @@
-package ch.mare.springfundamentals.dependencyinjection.service;
+package com.zuehlke.springfundamentals.dependencyinjection.service;
 
-import ch.mare.springfundamentals.dependencyinjection.domain.MailingAddress;
+import com.zuehlke.springfundamentals.dependencyinjection.domain.MailingAddress;
 import org.springframework.stereotype.Component;
 
 @Component

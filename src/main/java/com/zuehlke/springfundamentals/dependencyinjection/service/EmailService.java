@@ -1,4 +1,4 @@
-package ch.mare.springfundamentals.dependencyinjection.service;
+package com.zuehlke.springfundamentals.dependencyinjection.service;
 
 import org.springframework.stereotype.Service;
 

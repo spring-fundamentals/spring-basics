@@ -1,4 +1,4 @@
-package ch.mare.springfundamentals.dependencyinjection.domain;
+package com.zuehlke.springfundamentals.dependencyinjection.domain;
 
 public class MailingAddress {
 

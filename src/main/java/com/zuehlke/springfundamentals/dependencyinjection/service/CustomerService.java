@@ -1,7 +1,7 @@
-package ch.mare.springfundamentals.dependencyinjection.service;
+package com.zuehlke.springfundamentals.dependencyinjection.service;
 
-import ch.mare.springfundamentals.dependencyinjection.domain.Customer;
-import ch.mare.springfundamentals.dependencyinjection.dataaccess.CustomerLoader;
+import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
+import com.zuehlke.springfundamentals.dependencyinjection.dataaccess.CustomerLoader;
 
 public class CustomerService {
 
