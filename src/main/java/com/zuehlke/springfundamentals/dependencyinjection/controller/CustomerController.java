@@ -8,5 +8,4 @@ public class CustomerController {
     CustomerService customerService = new CustomerService();
     customerService.deactivateCustomer(customerId);
   }
-
 }
