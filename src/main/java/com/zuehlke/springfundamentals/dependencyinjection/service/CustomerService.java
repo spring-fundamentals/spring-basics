@@ -1,7 +1,7 @@
 package com.zuehlke.springfundamentals.dependencyinjection.service;
 
-import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
 import com.zuehlke.springfundamentals.dependencyinjection.dataaccess.CustomerLoader;
+import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
