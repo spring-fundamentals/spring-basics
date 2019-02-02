@@ -1,8 +1,12 @@
 package com.zuehlke.springfundamentals.dependencyinjection.dataaccess;
 
 import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
+import org.springframework.stereotype.Component;
 
-public interface CustomerLoader {
+@Component
+public class CustomerLoader {
 
-    Customer findById(String customerId);
+  public Customer findById(String customerId) {
+    return InMemoryDatabase.DATABASE.get(customerId);
+  }
 }

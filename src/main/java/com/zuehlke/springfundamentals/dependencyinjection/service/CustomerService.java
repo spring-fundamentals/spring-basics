@@ -14,13 +14,14 @@ public class CustomerService {
   private final EmailService emailService;
   private final PostalService postalService;
 
-  @Autowired
-  public CustomerService(CustomerLoader customerLoader, EmailService emailService, PostalService postalService) {
+  public CustomerService(CustomerLoader customerLoader, EmailService emailService,
+      PostalService postalService) {
     this.customerLoader = customerLoader;
     this.emailService = emailService;
     this.postalService = postalService;
   }
 
+  @Autowired
   public void deactivateCustomer(String customerId) {
 
     Customer customer = customerLoader.findById(customerId);
