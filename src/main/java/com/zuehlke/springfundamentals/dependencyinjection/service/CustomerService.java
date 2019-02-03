@@ -6,19 +6,25 @@ import com.zuehlke.springfundamentals.dependencyinjection.dataaccess.CustomerLoa
 public class CustomerService {
 
   private static final String DEACTIVATION_MESSAGE = "Your customer account has been successfully removed";
+  private EmailService emailService;
+  private final PostalService postalService;
+  private final CustomerLoader customerLoader;
+
+  public CustomerService(EmailService emailService, PostalService postalService, CustomerLoader customerLoader) {
+    this.emailService = emailService;
+    this.postalService = postalService;
+    this.customerLoader = customerLoader;
+  }
 
   public void deactivateCustomer(String customerId) {
 
-    CustomerLoader customerLoader = new CustomerLoader();
     Customer customer = customerLoader.findById(customerId);
 
     if (customer.hasEmailAddress()) {
       String emailAddress = customer.getEmailAddress();
-      EmailService emailService = new EmailService();
       emailService.send(emailAddress, "Customer Account", DEACTIVATION_MESSAGE);
     }
 
-    PostalService postalService = new PostalService();
     postalService.sendLetter(customer.getMailingAddress(), DEACTIVATION_MESSAGE);
   }
 }
