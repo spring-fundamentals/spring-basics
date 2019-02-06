@@ -1,18 +1,29 @@
 package com.zuehlke.springfundamentals.dependencyinjection.dataaccess;
 
+import com.acme.customermasterdata.api.CmdCustomerDto;
+import com.acme.customermasterdata.api.CustomerMasterDataClient;
 import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
+import com.zuehlke.springfundamentals.dependencyinjection.domain.MailingAddress;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("prod")
 public class RemoteCustomerLoader implements CustomerLoader {
 
-    @Override
-    public Customer findById(String customerId) {
-        try {
-            Thread.sleep(8000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return InMemoryDatabase.DATABASE.get(customerId);
-    }
+  private final CustomerMasterDataClient customerMasterDataClient;
+
+  public RemoteCustomerLoader(CustomerMasterDataClient customerMasterDataClient) {
+    this.customerMasterDataClient = customerMasterDataClient;
+  }
+
+  @Override
+  public Customer findById(String customerId) {
+    CmdCustomerDto loadedCustomer = customerMasterDataClient.findById(customerId);
+
+    return new Customer(loadedCustomer.getId(),
+        loadedCustomer.getName(),
+        new MailingAddress(loadedCustomer.getStreet(), loadedCustomer.getCity()),
+        loadedCustomer.getEmailAddress());
+  }
 }

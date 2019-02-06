@@ -2,10 +2,11 @@ package com.zuehlke.springfundamentals.dependencyinjection.dataaccess;
 
 import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@LocalAndMockProfileAreActive
+@Profile("local")
 @Primary
 public class MockCustomerLoader implements CustomerLoader {
 
