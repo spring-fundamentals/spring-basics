@@ -9,6 +9,7 @@ public class CustomerMasterDataClient {
 
   private void remoteCall() {
     try {
+      System.out.println("MAKING A REMOTE CALL...");
       Thread.sleep(8000);
     } catch (InterruptedException e) {
       e.printStackTrace();
