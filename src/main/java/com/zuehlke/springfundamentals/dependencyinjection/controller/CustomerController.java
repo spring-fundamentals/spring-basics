@@ -2,8 +2,9 @@ package com.zuehlke.springfundamentals.dependencyinjection.controller;
 
 import com.zuehlke.springfundamentals.dependencyinjection.service.CustomerService;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 
-@Component
+@Controller
 public class CustomerController {
 
   private final CustomerService customerService;

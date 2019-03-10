@@ -1,9 +1,9 @@
 package com.zuehlke.springfundamentals.dependencyinjection.service;
 
 import com.zuehlke.springfundamentals.dependencyinjection.domain.MailingAddress;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class PostalService {
 
   public void sendLetter(MailingAddress mailingAddress, String message) {

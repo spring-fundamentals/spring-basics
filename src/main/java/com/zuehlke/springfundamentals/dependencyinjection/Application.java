@@ -1,18 +1,17 @@
 package com.zuehlke.springfundamentals.dependencyinjection;
 
 import com.zuehlke.springfundamentals.dependencyinjection.controller.CustomerController;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
-@ComponentScan
+@SpringBootApplication
 public class Application {
 
   public static void main(String[] args) {
+    ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class, args);
 
-    ApplicationContext ctx = new AnnotationConfigApplicationContext(Application.class);
-
-    CustomerController customerController = ctx.getBean(CustomerController.class);
+    CustomerController customerController = applicationContext.getBean(CustomerController.class);
 
     customerController.deactivateCustomerAccount("1");
   }

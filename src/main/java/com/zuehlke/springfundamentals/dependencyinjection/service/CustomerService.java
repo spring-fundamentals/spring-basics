@@ -3,9 +3,9 @@ package com.zuehlke.springfundamentals.dependencyinjection.service;
 import com.zuehlke.springfundamentals.dependencyinjection.dataaccess.CustomerLoader;
 import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class CustomerService {
 
   private static final String DEACTIVATION_MESSAGE = "Your customer account has been successfully removed";

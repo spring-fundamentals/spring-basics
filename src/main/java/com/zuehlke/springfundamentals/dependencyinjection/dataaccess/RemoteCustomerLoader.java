@@ -1,29 +1,21 @@
 package com.zuehlke.springfundamentals.dependencyinjection.dataaccess;
 
-import com.acme.customermasterdata.api.CmdCustomerDto;
-import com.acme.customermasterdata.api.CustomerMasterDataClient;
 import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
 import com.zuehlke.springfundamentals.dependencyinjection.domain.MailingAddress;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("prod")
+@ConditionalOnProperty(name = "customer.loader.mock", havingValue = "false")
 public class RemoteCustomerLoader implements CustomerLoader {
-
-  private final CustomerMasterDataClient customerMasterDataClient;
-
-  public RemoteCustomerLoader(CustomerMasterDataClient customerMasterDataClient) {
-    this.customerMasterDataClient = customerMasterDataClient;
-  }
 
   @Override
   public Customer findById(String customerId) {
-    CmdCustomerDto loadedCustomer = customerMasterDataClient.findById(customerId);
 
-    return new Customer(loadedCustomer.getId(),
-        loadedCustomer.getName(),
-        new MailingAddress(loadedCustomer.getStreet(), loadedCustomer.getCity()),
-        loadedCustomer.getEmailAddress());
+    System.out.println("making a remote call to url: ...");
+
+    return InMemoryDatabase.DATABASE.get(customerId);
   }
 }
