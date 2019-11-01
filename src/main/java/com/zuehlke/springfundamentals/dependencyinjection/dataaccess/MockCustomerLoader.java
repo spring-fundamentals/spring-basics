@@ -6,12 +6,12 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("local")
+@Profile({"local", "default"})
 @Primary
 public class MockCustomerLoader implements CustomerLoader {
 
-  @Override
-  public Customer findById(String customerId) {
+    @Override
+    public Customer findById(String customerId) {
         return InMemoryDatabase.DATABASE.get(customerId);
-  }
+    }
 }
