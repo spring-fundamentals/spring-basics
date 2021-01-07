@@ -1,7 +1,5 @@
 package com.acme.customermasterdata.api;
 
-import com.zuehlke.springfundamentals.dependencyinjection.domain.MailingAddress;
-
 public class CmdCustomerDto {
 
   private String id;
