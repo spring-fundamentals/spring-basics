@@ -1,10 +1,7 @@
-package com.zuehlke.springfundamentals.dependencyinjection.dataaccess;
+package com.swisscom.springfundamentals.dependencyinjection.dataaccess;
 
-import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
-import com.zuehlke.springfundamentals.dependencyinjection.domain.MailingAddress;
-import org.springframework.beans.factory.annotation.Value;
+import com.swisscom.springfundamentals.dependencyinjection.domain.Customer;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
-import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
