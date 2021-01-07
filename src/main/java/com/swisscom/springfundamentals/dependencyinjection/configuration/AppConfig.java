@@ -1,4 +1,4 @@
-package com.zuehlke.springfundamentals.dependencyinjection.configuration;
+package com.swisscom.springfundamentals.dependencyinjection.configuration;
 
 import org.springframework.context.annotation.ComponentScan;
 

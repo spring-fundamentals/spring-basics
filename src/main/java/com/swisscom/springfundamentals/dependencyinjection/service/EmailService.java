@@ -1,4 +1,4 @@
-package com.zuehlke.springfundamentals.dependencyinjection.service;
+package com.swisscom.springfundamentals.dependencyinjection.service;
 
 public class EmailService {
 
