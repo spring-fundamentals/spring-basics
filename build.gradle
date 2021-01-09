@@ -1,5 +1,9 @@
 apply plugin: 'java'
 
+group = 'com.swisscom.springfundamentals'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = JavaVersion.VERSION_11
+
 repositories {
     mavenCentral()
 }
