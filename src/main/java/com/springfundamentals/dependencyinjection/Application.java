@@ -1,6 +1,6 @@
-package com.swisscom.springfundamentals.dependencyinjection;
+package com.springfundamentals.dependencyinjection;
 
-import com.swisscom.springfundamentals.dependencyinjection.controller.CustomerController;
+import com.springfundamentals.dependencyinjection.controller.CustomerController;
 
 public class Application {
 

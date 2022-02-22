@@ -1,7 +1,8 @@
-package com.swisscom.springfundamentals.dependencyinjection.dataaccess;
+package com.springfundamentals.dependencyinjection.dataaccess;
 
-import com.swisscom.springfundamentals.dependencyinjection.domain.Customer;
-import com.swisscom.springfundamentals.dependencyinjection.domain.MailingAddress;
+import com.springfundamentals.dependencyinjection.domain.Customer;
+import com.springfundamentals.dependencyinjection.domain.MailingAddress;
+
 import java.util.HashMap;
 import java.util.Map;
 
