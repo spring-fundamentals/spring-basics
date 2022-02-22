@@ -1,6 +1,6 @@
-package com.zuehlke.springfundamentals.dependencyinjection.controller;
+package com.springfundamentals.dependencyinjection.controller;
 
-import com.zuehlke.springfundamentals.dependencyinjection.service.CustomerService;
+import com.springfundamentals.dependencyinjection.service.CustomerService;
 import org.springframework.stereotype.Component;
 
 @Component

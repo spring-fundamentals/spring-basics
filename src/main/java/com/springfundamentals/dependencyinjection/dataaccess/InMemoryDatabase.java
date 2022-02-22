@@ -1,7 +1,7 @@
-package com.zuehlke.springfundamentals.dependencyinjection.dataaccess;
+package com.springfundamentals.dependencyinjection.dataaccess;
 
-import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
-import com.zuehlke.springfundamentals.dependencyinjection.domain.MailingAddress;
+import com.springfundamentals.dependencyinjection.domain.Customer;
+import com.springfundamentals.dependencyinjection.domain.MailingAddress;
 import java.util.HashMap;
 import java.util.Map;
 

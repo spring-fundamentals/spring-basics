@@ -1,6 +1,6 @@
-package com.zuehlke.springfundamentals.dependencyinjection.dataaccess;
+package com.springfundamentals.dependencyinjection.dataaccess;
 
-import com.zuehlke.springfundamentals.dependencyinjection.domain.Customer;
+import com.springfundamentals.dependencyinjection.domain.Customer;
 import org.springframework.stereotype.Component;
 
 @Component

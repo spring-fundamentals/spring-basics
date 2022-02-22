@@ -1,4 +1,4 @@
-package com.zuehlke.springfundamentals.dependencyinjection.domain;
+package com.springfundamentals.dependencyinjection.domain;
 
 public class Customer {
 
