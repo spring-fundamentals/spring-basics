@@ -1,6 +1,6 @@
-package com.swisscom.springfundamentals.dependencyinjection.dataaccess;
+package com.springfundamentals.dependencyinjection.dataaccess;
 
-import com.swisscom.springfundamentals.dependencyinjection.domain.Customer;
+import com.springfundamentals.dependencyinjection.domain.Customer;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 

@@ -1,7 +1,7 @@
-package com.swisscom.springfundamentals.dependencyinjection.service;
+package com.springfundamentals.dependencyinjection.service;
 
-import com.swisscom.springfundamentals.dependencyinjection.domain.Customer;
-import com.swisscom.springfundamentals.dependencyinjection.dataaccess.CustomerLoader;
+import com.springfundamentals.dependencyinjection.domain.Customer;
+import com.springfundamentals.dependencyinjection.dataaccess.CustomerLoader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
