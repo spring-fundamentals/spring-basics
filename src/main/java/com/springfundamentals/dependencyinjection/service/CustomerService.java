@@ -6,7 +6,8 @@ import com.springfundamentals.dependencyinjection.domain.Customer;
 public class CustomerService {
 
   private static final String DEACTIVATION_MESSAGE = "Your customer account has been successfully removed";
-  private EmailService emailService;
+
+  private final EmailService emailService;
   private final PostalService postalService;
   private final CustomerLoader customerLoader;
 
