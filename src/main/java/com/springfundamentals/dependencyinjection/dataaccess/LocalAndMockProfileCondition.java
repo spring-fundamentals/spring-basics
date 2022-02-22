@@ -1,4 +1,4 @@
-package com.swisscom.springfundamentals.dependencyinjection.dataaccess;
+package com.springfundamentals.dependencyinjection.dataaccess;
 
 import static java.util.Arrays.asList;
 

@@ -1,7 +1,7 @@
-package com.swisscom.springfundamentals.dependencyinjection;
+package com.springfundamentals.dependencyinjection;
 
-import com.swisscom.springfundamentals.dependencyinjection.configuration.AppConfig;
-import com.swisscom.springfundamentals.dependencyinjection.controller.CustomerController;
+import com.springfundamentals.dependencyinjection.controller.CustomerController;
+import com.springfundamentals.dependencyinjection.configuration.AppConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
