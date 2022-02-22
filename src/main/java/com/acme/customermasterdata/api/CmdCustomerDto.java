@@ -2,11 +2,11 @@ package com.acme.customermasterdata.api;
 
 public class CmdCustomerDto {
 
-  private String id;
-  private String name;
-  private String street;
-  private String city;
-  private String emailAddress;
+  private final String id;
+  private final String name;
+  private final String street;
+  private final String city;
+  private final String emailAddress;
 
   public CmdCustomerDto(String id, String name, String street, String city, String emailAddress) {
     this.id = id;

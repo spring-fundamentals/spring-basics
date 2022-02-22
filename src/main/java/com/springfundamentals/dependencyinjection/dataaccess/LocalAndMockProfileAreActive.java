@@ -1,4 +1,4 @@
-package com.swisscom.springfundamentals.dependencyinjection.dataaccess;
+package com.springfundamentals.dependencyinjection.dataaccess;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

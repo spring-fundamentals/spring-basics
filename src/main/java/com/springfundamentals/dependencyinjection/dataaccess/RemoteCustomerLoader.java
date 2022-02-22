@@ -1,9 +1,9 @@
-package com.swisscom.springfundamentals.dependencyinjection.dataaccess;
+package com.springfundamentals.dependencyinjection.dataaccess;
 
 import com.acme.customermasterdata.api.CmdCustomerDto;
 import com.acme.customermasterdata.api.CustomerMasterDataClient;
-import com.swisscom.springfundamentals.dependencyinjection.domain.Customer;
-import com.swisscom.springfundamentals.dependencyinjection.domain.MailingAddress;
+import com.springfundamentals.dependencyinjection.domain.Customer;
+import com.springfundamentals.dependencyinjection.domain.MailingAddress;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
