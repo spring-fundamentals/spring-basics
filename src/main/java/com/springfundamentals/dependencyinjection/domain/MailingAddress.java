@@ -2,8 +2,8 @@ package com.springfundamentals.dependencyinjection.domain;
 
 public class MailingAddress {
 
-  private String street;
-  private String city;
+  private final String street;
+  private final String city;
 
   public MailingAddress(String street, String city) {
     this.street = street;

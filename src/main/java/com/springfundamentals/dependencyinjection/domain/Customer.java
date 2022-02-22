@@ -2,10 +2,10 @@ package com.springfundamentals.dependencyinjection.domain;
 
 public class Customer {
 
-  private String id;
-  private String name;
-  private MailingAddress mailingAddress;
-  private String emailAddress;
+  private final String id;
+  private final String name;
+  private final MailingAddress mailingAddress;
+  private final String emailAddress;
 
   public Customer(String id, String name, MailingAddress mailingAddress, String emailAddress) {
     this.id = id;
