@@ -1,12 +1,12 @@
 package com.springfundamentals.dependencyinjection.dataaccess;
 
-import static java.util.Arrays.asList;
-
-import java.util.Arrays;
-import java.util.List;
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.type.AnnotatedTypeMetadata;
+
+import java.util.List;
+
+import static java.util.Arrays.asList;
 
 public class LocalAndMockProfileCondition implements Condition {
 

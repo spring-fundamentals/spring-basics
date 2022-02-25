@@ -8,12 +8,12 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan
 public class Application {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    ApplicationContext ctx = new AnnotationConfigApplicationContext(Application.class);
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(Application.class);
 
-    CustomerController customerController = ctx.getBean(CustomerController.class);
+        CustomerController customerController = ctx.getBean(CustomerController.class);
 
-    customerController.deactivateCustomerAccount("1");
-  }
+        customerController.deactivateCustomerAccount("1");
+    }
 }
