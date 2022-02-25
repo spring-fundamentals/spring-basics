@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 @ConditionalOnProperty(name = "customer.loader.mock", havingValue = "false")
 public class RemoteCustomerLoader implements CustomerLoader {
 
-  @Override
-  public Customer findById(String customerId) {
+    @Override
+    public Customer findById(String customerId) {
 
-    System.out.println("making a remote call to url: ...");
+        System.out.println("making a remote call to url: ...");
 
-    return InMemoryDatabase.DATABASE.get(customerId);
-  }
+        return InMemoryDatabase.DATABASE.get(customerId);
+    }
 }

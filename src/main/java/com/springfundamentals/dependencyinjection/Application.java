@@ -8,11 +8,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 @SpringBootApplication
 public class Application {
 
-  public static void main(String[] args) {
-    ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class, args);
+    public static void main(String[] args) {
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class, args);
 
-    CustomerController customerController = applicationContext.getBean(CustomerController.class);
+        CustomerController customerController = applicationContext.getBean(CustomerController.class);
 
-    customerController.deactivateCustomerAccount("1");
-  }
+        customerController.deactivateCustomerAccount("1");
+    }
 }

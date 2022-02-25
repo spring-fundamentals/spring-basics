@@ -7,9 +7,9 @@ import org.springframework.stereotype.Component;
 //@ConditionalOnProperty(name = "customer.loader.mock", havingValue = "true")
 public class MockCustomerLoader implements CustomerLoader {
 
-  @Override
-  public Customer findById(String customerId) {
-    System.out.println("mock is active");
-    return InMemoryDatabase.DATABASE.get(customerId);
-  }
+    @Override
+    public Customer findById(String customerId) {
+        System.out.println("mock is active");
+        return InMemoryDatabase.DATABASE.get(customerId);
+    }
 }
