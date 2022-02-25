@@ -8,13 +8,13 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.springfundamentals.dependencyinjection")
 public class Application {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(Application.class);
 
-    CustomerController customerController = context.getBean(CustomerController.class);
+        CustomerController customerController = context.getBean(CustomerController.class);
 
-    customerController.deactivateCustomerAccount("1");
+        customerController.deactivateCustomerAccount("1");
 
-  }
+    }
 }

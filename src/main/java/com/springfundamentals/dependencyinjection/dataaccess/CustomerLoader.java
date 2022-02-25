@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomerLoader {
 
-  public Customer findById(String customerId) {
-    return InMemoryDatabase.DATABASE.get(customerId);
-  }
+    public Customer findById(String customerId) {
+        return InMemoryDatabase.DATABASE.get(customerId);
+    }
 }
