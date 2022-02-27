@@ -1,16 +1,20 @@
-plugins { id 'java' }
-plugins { id 'org.springframework.boot' version '2.6.3' }
-plugins { id 'io.spring.dependency-management' version '1.0.11.RELEASE' }
+plugins {
+    id 'java'
+}
 
 group = 'com.springfundamentals'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = JavaVersion.VERSION_17
 
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
 
-dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
+subprojects {
+    apply plugin: 'java'
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 }
-

@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
+//@Import(CustomerClientConfiguration.class)
+//@ComponentScan({"com.springfundamentals.dependencyinjection", "com.swisscom.customerclient"})
 public class Application {
 
     public static void main(String[] args) {

@@ -1,10 +1,11 @@
 package com.springfundamentals.dependencyinjection.dataaccess;
 
 import com.springfundamentals.dependencyinjection.domain.Customer;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 @Component
-//@ConditionalOnProperty(name = "customer.loader.mock", havingValue = "true")
+@ConditionalOnProperty(name = "customer.loader.mock", havingValue = "true")
 public class MockCustomerLoader implements CustomerLoader {
 
     @Override

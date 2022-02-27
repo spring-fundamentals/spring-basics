@@ -1,0 +1,5 @@
+rootProject.name = 'spring-basics'
+
+include "customer-client-lib"
+include "customer-client-lib-autoconfigure"
+include "my-app"
