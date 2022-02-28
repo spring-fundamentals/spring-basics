@@ -4,5 +4,5 @@ plugins { id 'io.spring.dependency-management' version '1.0.11.RELEASE' }
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
 
-    implementation project(":customer-client-lib-autoconfigure")
+    implementation project(":customer-client-spring-lib")
 }
