@@ -9,5 +9,13 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework:spring-context:5.3.15'
+    //implementation 'org.springframework:spring-context:5.3.15'
+
+    //testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    //testImplementation 'org.mockito:mockito-core:4.0.0'
 }
+
+//tasks.named('test') {
+//    useJUnitPlatform()
+//}
+
