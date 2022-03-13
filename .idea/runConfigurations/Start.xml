@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="Start" type="Application" factoryName="Application">
-    <option name="MAIN_CLASS_NAME" value="com.zuehlke.springfundamentals.dependencyinjection.Application" />
+    <option name="MAIN_CLASS_NAME" value="com.springfundamentals.dependencyinjection.Application" />
     <module name="spring-basics.main" />
     <extension name="coverage">
       <pattern>
