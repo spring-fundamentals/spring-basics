@@ -1,8 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Start in Prod profile" type="Application" factoryName="Application">
+  <configuration default="false" name="Start in local profile" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.springfundamentals.dependencyinjection.Application" />
     <module name="spring-basics.main" />
-    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=prod" />
+    <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local" />
     <extension name="coverage">
       <pattern>
         <option name="PATTERN" value="com.zuehlke.springfundamentals.dependencyinjection.*" />

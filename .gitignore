@@ -1,4 +1,6 @@
 .gradle
 .idea
 build
-!.idea/runConfigurations/**
+/.idea/*
+!/.idea/runConfigurations
+!/.idea/runConfigurations/*
