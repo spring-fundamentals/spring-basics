@@ -8,16 +8,16 @@ import com.springfundamentals.dependencyinjection.service.PostalService;
 
 public class Application {
 
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 
-    EmailService emailService = new EmailService();
-    PostalService postalService = new PostalService();
-    CustomerLoader customerLoader = new CustomerLoader();
-    CustomerService customerService = new CustomerService(emailService, postalService, customerLoader);
+        EmailService emailService = new EmailService();
+        PostalService postalService = new PostalService();
+        CustomerLoader customerLoader = new CustomerLoader();
+        CustomerService customerService = new CustomerService(emailService, postalService, customerLoader);
 
-    CustomerController customerController = new CustomerController(customerService);
+        CustomerController customerController = new CustomerController(customerService);
 
-    customerController.deactivateCustomerAccount("1");
-  }
+        customerController.deactivateCustomerAccount("1");
+    }
 
 }

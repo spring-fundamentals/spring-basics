@@ -5,27 +5,27 @@ import com.springfundamentals.dependencyinjection.domain.Customer;
 
 public class CustomerService {
 
-  private static final String DEACTIVATION_MESSAGE = "Your customer account has been successfully removed";
+    private static final String DEACTIVATION_MESSAGE = "Your customer account has been successfully removed";
 
-  private final EmailService emailService;
-  private final PostalService postalService;
-  private final CustomerLoader customerLoader;
+    private final EmailService emailService;
+    private final PostalService postalService;
+    private final CustomerLoader customerLoader;
 
-  public CustomerService(EmailService emailService, PostalService postalService, CustomerLoader customerLoader) {
-    this.emailService = emailService;
-    this.postalService = postalService;
-    this.customerLoader = customerLoader;
-  }
-
-  public void deactivateCustomer(String customerId) {
-
-    Customer customer = customerLoader.findById(customerId);
-
-    if (customer.hasEmailAddress()) {
-      String emailAddress = customer.getEmailAddress();
-      emailService.send(emailAddress, "Customer Account", DEACTIVATION_MESSAGE);
+    public CustomerService(EmailService emailService, PostalService postalService, CustomerLoader customerLoader) {
+        this.emailService = emailService;
+        this.postalService = postalService;
+        this.customerLoader = customerLoader;
     }
 
-    postalService.sendLetter(customer.getMailingAddress(), DEACTIVATION_MESSAGE);
-  }
+    public void deactivateCustomer(String customerId) {
+
+        Customer customer = customerLoader.findById(customerId);
+
+        if (customer.hasEmailAddress()) {
+            String emailAddress = customer.getEmailAddress();
+            emailService.send(emailAddress, "Customer Account", DEACTIVATION_MESSAGE);
+        }
+
+        postalService.sendLetter(customer.getMailingAddress(), DEACTIVATION_MESSAGE);
+    }
 }
