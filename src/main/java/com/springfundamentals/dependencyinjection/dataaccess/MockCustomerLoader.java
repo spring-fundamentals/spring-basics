@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 @Primary
 public class MockCustomerLoader implements CustomerLoader {
 
-  @Override
-  public Customer findById(String customerId) {
+    @Override
+    public Customer findById(String customerId) {
         return InMemoryDatabase.DATABASE.get(customerId);
-  }
+    }
 }
