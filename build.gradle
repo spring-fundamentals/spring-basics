@@ -1,4 +1,6 @@
-apply plugin: 'java'
+plugins {
+    id 'java'
+}
 
 group = 'com.springfundamentals'
 version = '0.0.1-SNAPSHOT'
@@ -9,6 +11,6 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework:spring-core:5.3.15'
-    implementation 'org.springframework:spring-context:5.3.15'
+    implementation 'org.springframework:spring-core:5.3.22'
+    implementation 'org.springframework:spring-context:5.3.22'
 }
