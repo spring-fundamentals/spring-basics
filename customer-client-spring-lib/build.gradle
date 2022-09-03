@@ -3,6 +3,6 @@ plugins {
 }
 
 dependencies {
-    implementation 'org.springframework:spring-context:5.3.15'
+    implementation 'org.springframework:spring-context:5.3.22'
     api project(":customer-client-lib")
 }
