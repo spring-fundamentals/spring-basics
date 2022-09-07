@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 //@ComponentScan({"com.springfundamentals.dependencyinjection", "com.swisscom.customerclient"})
 //@Import(CustomerClientConfiguration.class)
 //@EnableCustomerClient
+//Auto Config
 public class Application {
 
     public static void main(String[] args) {
