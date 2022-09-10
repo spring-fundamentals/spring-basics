@@ -7,18 +7,25 @@ public class CustomerService {
 
     private static final String DEACTIVATION_MESSAGE = "Your customer account has been successfully removed";
 
+    private final CustomerLoader customerLoader;
+    private final EmailService emailService;
+    private final PostalService postalService;
+
+    public CustomerService(CustomerLoader customerLoader, EmailService emailService, PostalService postalService) {
+        this.customerLoader = customerLoader;
+        this.emailService = emailService;
+        this.postalService = postalService;
+    }
+
     public void deactivateCustomer(String customerId) {
 
-        CustomerLoader customerLoader = new CustomerLoader();
         Customer customer = customerLoader.findById(customerId);
 
         if (customer.hasEmailAddress()) {
             String emailAddress = customer.getEmailAddress();
-            EmailService emailService = new EmailService();
             emailService.send(emailAddress, "Customer Account", DEACTIVATION_MESSAGE);
         }
 
-        PostalService postalService = new PostalService();
         postalService.sendLetter(customer.getMailingAddress(), DEACTIVATION_MESSAGE);
     }
 }
