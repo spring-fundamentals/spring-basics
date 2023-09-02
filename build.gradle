@@ -10,5 +10,5 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework:spring-context:5.3.22'
+    implementation 'org.springframework:spring-context:6.0.11'
 }
