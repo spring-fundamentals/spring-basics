@@ -1,2 +1,3 @@
+#deprecated
 #org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 #com.swisscom.customerclient.config.CustomerClientConfiguration
