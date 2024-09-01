@@ -5,7 +5,25 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailService {
 
-    public void send(String emailAddress, String subject, String message) {
-        System.out.println("Email with subject '" + subject + "' has been sent to " + emailAddress);
-    }
+	private String receiverAddress;
+
+	public void send(String receiverAddress, String subject, String content) {
+		this.receiverAddress = receiverAddress;
+
+		someProcessing();
+
+		send(subject, content);
+	}
+
+	private void send(String subject, String content) {
+		System.out.println("Send email with subject '" + subject + "' and content '" + content + "' to " + this.receiverAddress);
+	}
+
+	private void someProcessing() {
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
+	}
 }
